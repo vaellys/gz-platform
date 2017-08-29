@@ -10,27 +10,21 @@
 <reps:container>
 	<reps:panel id="first" dock="top" action="add.mvc" formId="form" validForm="true" >
 		<reps:formcontent>
-		
 			<reps:formfield label="评分项"  fullRow="true">
 				<reps:input name="item" maxLength="30" required="true"></reps:input>
 			</reps:formfield>
-			
 			<reps:formfield label="具体行为内容" fullRow="true">
-				<reps:input name="content" maxLength="200" multiLine="true" style="width:516px;height:70px"></reps:input>
+				<reps:input name="content" maxLength="200" multiLine="true" style="width:516px;height:70px" required="true"></reps:input>
 			</reps:formfield>
-			
 			<reps:formfield label="奖励积分" fullRow="true">
-				<reps:input name="pointsScope" maxLength="30" required="true"></reps:input>
+				<reps:select name="pointsScope" jsonData="{'1':'0~1','2':'0~2','3':'0~3','4':'0~4','5':'0~5'}" required="true"></reps:select>
 			</reps:formfield>
-			
 			<reps:formfield label="适用年级" fullRow="true">
-				<reps:select name="applyGrade" jsonData="{'':'全部','一年级':'一年级','二年级':'二年级'}" required="true"></reps:select>
+				<reps:select name="applyGrade" dataSource="${gradeMap}" required="true"></reps:select>
 			</reps:formfield>
-			
 			<reps:formfield label="是否可用" fullRow="true">
-				<reps:select name="isEnabled" jsonData="{'1':'是','0':'否'}" ></reps:select>
+				<reps:select name="isEnabled" jsonData="{'1':'是','0':'否'}" required="true"></reps:select>
 			</reps:formfield>
-			
 		</reps:formcontent>
 		<br/>
 		<reps:formbar>
@@ -42,7 +36,7 @@
 </body>
 <script type="text/javascript">
 	var skip = function(data) {
-		messager.message(data, function(){ window.parent.location.reload(); });
+		messager.message(data, function(){ back(); });
 	};
 	
 	function back() {

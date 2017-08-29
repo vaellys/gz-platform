@@ -3,29 +3,29 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>指标分类修改</title>
+	<title>>家庭行为评分修改</title>
 	<reps:theme />
 </head>
 <body>
 <reps:container>
 	<reps:panel id="first" dock="top" action="edit.mvc" formId="xform" validForm="true" style="width:800px">
 		<reps:formcontent>
-		
-			<reps:formfield label="上级分类" labelStyle="width:20%" textStyle="width:82%;padding-left:10px;font-size:16px;font-weight:bold;color:blue;" fullRow="true">
-				${not empty parentCategory ? parentCategory.name : ""}
-				 <input type="hidden" name="parentId" value="${not empty parentCategory ? parentCategory.id : '-1'}">
+			<reps:formfield label="评分项"  fullRow="true">
+				<reps:input name="item" maxLength="30" required="true">${parentPjfzsz.item }</reps:input>
 			</reps:formfield>
-			
-			<input type="hidden" value="${category.id}" name="id">
-			<reps:formfield label="分类名称" labelStyle="width:20%" textStyle="width:20%">
-				<reps:input name="name" maxLength="30" required="true">${category.name }</reps:input>
+			<reps:formfield label="具体行为内容" fullRow="true">
+				<reps:input name="content" maxLength="200" multiLine="true" style="width:516px;height:70px" required="true">${parentPjfzsz.content }</reps:input>
 			</reps:formfield>
-			<reps:formfield label="分类类别" labelStyle="width:15%" textStyle="width:30%">
-				<reps:select name="type" dataSource="${categoryTypeMap}" required="true">${category.type }</reps:select>
+			<reps:formfield label="奖励积分" fullRow="true">
+				<reps:select name="pointsScope" jsonData="{'1':'0~1','2':'0~2','3':'0~3','4':'0~4','5':'0~5'}" required="true">${parentPjfzsz.pointsScope }</reps:select>
 			</reps:formfield>
-			<reps:formfield label="分类描述" fullRow="true">
-				<reps:input name="description" maxLength="200" multiLine="true" style="width:516px;height:70px">${category.description }</reps:input>
+			<reps:formfield label="适用年级" fullRow="true">
+				<reps:select name="applyGrade" dataSource="${gradeMap}" required="true">${parentPjfzsz.applyGrade}</reps:select>
 			</reps:formfield>
+			<reps:formfield label="是否可用" fullRow="true">
+				<reps:select name="isEnabled" jsonData="{'1':'是','0':'否'}" required="true">${parentPjfzsz.isEnabled }</reps:select>
+			</reps:formfield>
+			<input type="hidden" value="${parentPjfzsz.id}" name="id">
 		</reps:formcontent>
 		<reps:formbar>
 			<reps:ajax messageCode="edit.button.save" formId="xform" callBack="skip" type="link"
@@ -43,7 +43,7 @@
 	};
 	
 	function back() {
-		window.location.href= "list.mvc?parentId=${category.parentId}";
+		window.location.href= "list.mvc";
 	}
 	
 </script>

@@ -17,7 +17,7 @@
 				<reps:detailfield label="活动分类" fullRow="true"
 					labelStyle="width:20%;">${activity.jfRewardCategory.name }</reps:detailfield>
 				<reps:detailfield label="兑换截至时间" fullRow="true"
-					labelStyle="width:20%;">${activity.finishTime }</reps:detailfield>
+					labelStyle="width:20%;"${pactivityfinishTime }	</reps:detailfield>
 				<reps:detailfield label="所需积分" fullRow="true"
 					labelStyle="width:20%;">${activity.points }</reps:detailfield>
 				<reps:detailfield label="上线时间" fullRow="true"

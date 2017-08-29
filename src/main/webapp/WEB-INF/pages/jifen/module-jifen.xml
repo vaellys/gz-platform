@@ -71,14 +71,14 @@
 						<node code="jifen050101" name="新增" showOrder="1" newpage="false" type="Operate">
 							<action>/reps/jifen/parentpjfzsz/toadd.mvc;/reps/jifen/parentpjfzsz/add.mvc</action>
 						</node>
-						<node code="jifen020102" name="修改分类" showOrder="2" newpage="false" type="Operate">
-							<action>/reps/jifen/rewardcategory/toedit.mvc;/reps/jifen/rewardcategory/edit.mvc</action>
+						<node code="jifen050102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/reps/jifen/parentpjfzsz/toedit.mvc;/reps/jifen/parentpjfzsz/edit.mvc</action>
 						</node>
-						<node code="jifen020103" name="删除分类" showOrder="3" newpage="false" type="Operate">
-							<action>/reps/jifen/rewardcategory/delete.mvc</action>
+						<node code="jifen050103" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/reps/jifen/parentpjfzsz/delete.mvc;/reps/jifen/parentpjfzsz/batchdelete.mvc</action>
 						</node>
-						<node code="jifen020104" name="分类详细" showOrder="4" newpage="false" type="Operate">
-							<action>/reps/jifen/rewardcategory/show.mvc</action>
+						<node code="jifen050104" name="详细" showOrder="4" newpage="false" type="Operate">
+							<action>/reps/jifen/parentpjfzsz/show.mvc</action>
 						</node>
 					</nodes>
 				</node>
