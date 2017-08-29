@@ -3,30 +3,34 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>指标分类添加</title>
+	<title>家庭行为评分新增</title>
 	<reps:theme />
 </head>
 <body>
 <reps:container>
-	<reps:panel id="first" dock="top" action="add.mvc" formId="form" validForm="true" style="width:800px">
+	<reps:panel id="first" dock="top" action="add.mvc" formId="form" validForm="true" >
 		<reps:formcontent>
 		
-		    <reps:formfield label="上级分类" labelStyle="width:20%" textStyle="width:82%;padding-left:10px;font-size:16px;font-weight:bold;color:blue;" fullRow="true">
-				${not empty category.name ? category.name : ""}
-				 <input type="hidden" name="parentId" value="${not empty category.id ? category.id : '-1'}">
+			<reps:formfield label="评分项"  fullRow="true">
+				<reps:input name="item" maxLength="30" required="true"></reps:input>
 			</reps:formfield>
 			
-			<reps:formfield label="分类名称" labelStyle="width:20%" textStyle="width:20%">
-				<reps:input name="name" maxLength="30" required="true"></reps:input>
+			<reps:formfield label="具体行为内容" fullRow="true">
+				<reps:input name="content" maxLength="200" multiLine="true" style="width:516px;height:70px"></reps:input>
 			</reps:formfield>
 			
-			<reps:formfield label="分类类别" labelStyle="width:15%" textStyle="width:30%" fullRow="true">
-				<reps:select name="type" dataSource="${categoryTypeMap}" required="true">${not empty category.type ? category.type : ""}</reps:select>
+			<reps:formfield label="奖励积分" fullRow="true">
+				<reps:input name="pointsScope" maxLength="30" required="true"></reps:input>
 			</reps:formfield>
 			
-			<reps:formfield label="分类描述" fullRow="true">
-				<reps:input name="description" maxLength="200" multiLine="true" style="width:516px;height:70px"></reps:input>
+			<reps:formfield label="适用年级" fullRow="true">
+				<reps:select name="applyGrade" jsonData="{'':'全部','一年级':'一年级','二年级':'二年级'}" required="true"></reps:select>
 			</reps:formfield>
+			
+			<reps:formfield label="是否可用" fullRow="true">
+				<reps:select name="isEnabled" jsonData="{'1':'是','0':'否'}" ></reps:select>
+			</reps:formfield>
+			
 		</reps:formcontent>
 		<br/>
 		<reps:formbar>
@@ -42,7 +46,7 @@
 	};
 	
 	function back() {
-		window.location.href= "list.mvc?parentId=${not empty category.id ? category.id : '-1'}";
+		window.location.href= "list.mvc";
 	}
 
 </script>

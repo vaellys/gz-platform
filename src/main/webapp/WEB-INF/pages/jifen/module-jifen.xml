@@ -68,8 +68,8 @@
 				<node code="jifen050100" name="家庭行为评分设置" showOrder="1" newpage="false" type="Action" >
 					<action>/reps/jifen/parentpjfzsz/list.mvc</action>
 					<nodes>
-						<node code="jifen020101" name="新增分类" showOrder="1" newpage="false" type="Operate">
-							<action>/reps/jifen/rewardcategory/toadd.mvc;/reps/jifen/rewardcategory/add.mvc</action>
+						<node code="jifen050101" name="新增" showOrder="1" newpage="false" type="Operate">
+							<action>/reps/jifen/parentpjfzsz/toadd.mvc;/reps/jifen/parentpjfzsz/add.mvc</action>
 						</node>
 						<node code="jifen020102" name="修改分类" showOrder="2" newpage="false" type="Operate">
 							<action>/reps/jifen/rewardcategory/toedit.mvc;/reps/jifen/rewardcategory/edit.mvc</action>
