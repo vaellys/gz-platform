@@ -1,0 +1,159 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.reps</groupId>
+		<artifactId>reps-platform-parent</artifactId>
+		<version>2.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>gz-platform</artifactId>
+	<packaging>war</packaging>
+	<name>gz-platform</name>
+
+	<properties>
+		<project.build.targetVersion>1.7</project.build.targetVersion>
+		<project.build.sourceVersion>1.7</project.build.sourceVersion>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.reps</groupId>
+			<artifactId>reps-platform-web</artifactId>
+			<version>2.0-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
+		
+		<!-- <dependency>
+			<groupId>com.reps</groupId>
+			<artifactId>reps-cms-guestbook-action</artifactId>
+			<version>2.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.reps</groupId>
+			<artifactId>reps-cms-visit-action</artifactId>
+			<version>2.0.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.reps</groupId>
+			<artifactId>reps-jxzljc-action</artifactId>
+			<version>2.0-SNAPSHOT</version>
+		</dependency> -->
+		<dependency>
+			<groupId>com.reps</groupId>
+			<artifactId>reps-system-action</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.reps</groupId>
+			<artifactId>reps-system-standard</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.reps</groupId>
+			<artifactId>reps-dc</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.reps</groupId>
+			<artifactId>reps-jifen-action</artifactId>
+			<version>2.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- <dependency>
+			<groupId>com.reps</groupId>
+			<artifactId>gz-xxgk-action</artifactId>
+			<version>2.0-SNAPSHOT</version>
+		</dependency> -->
+
+		<dependency>
+			<groupId>com.baidu</groupId>
+			<artifactId>ueditor</artifactId>
+			<version>1.1.0</version>
+		</dependency>
+
+		<!-- web依赖包 -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- WEB end -->
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${project.build.sourceVersion}</source>
+					<target>${project.build.targetVersion}</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.6</version>
+				<configuration>
+					<version>3.0</version>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+					<overlays>
+						<overlay>
+							<groupId>com.reps</groupId>
+							<artifactId>reps-platform-web</artifactId>
+							<excludes>
+								<exclude>WEB-INF/classes/properties/**</exclude>
+								<exclude>WEB-INF/classes/spring/reps.dc.xml</exclude>
+								<exclude>WEB-INF/classes/spring/reps.dsc.xml</exclude>
+								<exclude>WEB-INF/classes/spring/reps.mongodb.xml</exclude>
+								<exclude>WEB-INF/classes/spring/reps.standard.xml</exclude>
+							</excludes>
+						</overlay>
+					</overlays>
+					<webResources>
+						<resource>
+							<directory>${env.config}</directory>
+							<targetPath>/</targetPath>
+						</resource>
+					</webResources>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	<profiles>
+		<profile>
+			<id>204release</id>
+			<properties>
+				<env.config>profiles/204release</env.config>
+			</properties>
+		</profile>
+		<profile>
+			<id>204dev</id>
+			<properties>
+				<env.config>profiles/204dev</env.config>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+	</profiles>
+
+</project>

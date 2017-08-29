@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="cmsauth">
+	<description>站点权限管理</description>
+	<menu baseUrl="http://223.202.64.204:50803">
+		<node code="auth010000" parentCode="cms" name="站点权限管理" type="Catalog" showOrder="1" newpage="false" icon="cms-c-site-auth-icon">
+			<nodes>
+				<node code="auth010100" name="站点权限管理" type="Action" showOrder="1" newpage="false" icon="cms-m-site-auth-icon">
+					<action>/cms/authority/list.mvc</action>
+					<nodes>
+						<node code="auth010101" name="分配权限" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/authority/toauthority.mvc;/cms/authority/authority.mvc</action>
+						</node>
+					</nodes>
+				</node>
+			</nodes>
+		</node>
+	</menu>
+</module>

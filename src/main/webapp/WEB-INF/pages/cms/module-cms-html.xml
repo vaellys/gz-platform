@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="cmshtml">
+	<description>静态化管理</description>
+	<menu baseUrl="http://223.202.64.204:50481/cms">
+		<node code="html010000" parentCode="cms" name="静态化管理" type="Catalog" showOrder="1" newpage="false" icon="cms-c-html-icon">
+			<nodes>
+				<node code="html020100" name="主页静态化" type="Action" showOrder="1" newpage="false" icon="cms-m-html-home-icon">
+					<action>/cms/html/index.mvc;/cms/html/console.mvc</action>
+					<nodes>
+						<node code="html020101" name="生成静态主页" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/html/s_index.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="html020200" name="栏目静态化" type="Action" showOrder="2" newpage="false" icon="cms-m-html-channel-icon">
+					<action>/cms/html/channel.mvc</action>
+					<nodes>
+						<node code="html020201" name="生成栏目静态页" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/html/s_channel.mvc;/cms/html/choosechannel.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="html020300" name="内容静态化" type="Action" showOrder="3" newpage="false" icon="cms-m-html-content-icon">
+					<action>/cms/html/content.mvc</action>
+					<nodes>
+						<node code="html020301" name="生成内容静态页" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/html/s_content.mvc;/cms/html/choosechannel.mvc</action>
+						</node>
+					</nodes>
+				</node>
+			</nodes>
+		</node>
+	</menu>
+	<consts>
+		<!-- 生成静态页路径 -->
+		<citem name="staitchtmlpath" value="E:\java\apache-tomcat-7.0.54\webapps\ROOT"></citem>
+	</consts>
+</module>

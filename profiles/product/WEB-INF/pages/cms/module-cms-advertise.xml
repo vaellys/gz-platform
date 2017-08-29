@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="advert">
+	<description>广告管理</description>
+	<menu baseUrl="http://10.0.200.103:8083">
+		<node code="advert010000" parentCode="cms" name="广告管理" type="Catalog"
+			showOrder="1" newpage="false" icon="cms-c-template-icon">
+
+			<nodes>
+				<node code="advert010100" name="广告管理" showOrder="1" newpage="false" type="Action">
+					<action>/cms/advert/list.mvc</action>
+					<nodes>
+						<node code="advert010101" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/advert/toadd.mvc;/cms/advert/add.mvc</action>
+						</node>
+						<node code="advert010102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/advert/toedit.mvc;/cms/advert/edit.mvc</action>
+						</node>
+						<node code="advert010103" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/advert/delete.mvc</action>
+						</node>
+						<node code="advert010104" name="详细" showOrder="4" newpage="false" type="Operate">
+							<action>/cms/advert/detail.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				
+				
+			</nodes>
+		</node>
+	</menu>
+	
+</module>

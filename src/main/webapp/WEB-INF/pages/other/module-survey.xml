@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<module name="survey">
+  <description>this is a test</description>
+  <menu>
+    <node code="survey010000" parentCode="other" name="问卷调查" type="Catalog" showOrder="1" icon="globalfunction" newpage="false">
+        <nodes>
+      	   <node code="survey010100" name="问卷调查" showOrder="1" newpage="false" type="Action">
+              <action>/survey/admin/list.mvc;/survey/admin/edit.mvc;/survey/admin/save.mvc;/survey/admin/start.mvc;/survey/admin/del.mvc;/survey/admin/finish.mvc;/survey/admin/config.mvc;/survey/admin/additem.mvc;/survey/admin/edititem.mvc;/survey/admin/saveitem.mvc;/survey/admin/delitem.mvc;/survey/admin/view.mvc;/survey/admin/record.mvc;/survey/admin/delay.mvc;</action>
+           </node>
+      	   <!-- 
+      	   <node code="survey010200" name="课题征集" showOrder="1" newpage="false" type="Action">
+              <action>/survey/subject/list.mvc;/survey/subject/detail.mvc;/survey/subject/toadd.mvc;/survey/subject/add.mvc;/survey/subject/toedit.mvc;/survey/subject/edit.mvc;/survey/subject/delete.mvc;/survey/subject/export.mvc;/survey/subject/downexcel.mvc
+              </action>
+           </node>
+      	    -->
+        </nodes>
+    </node>
+  </menu>
+ <security>
+    <nologin>/reps/survey/web/*</nologin>
+    <nologin>/reps/survey/subject/tocollect.mvc</nologin>
+    <nologin>/reps/survey/subject/add.mvc</nologin>
+ </security>
+ <consts>
+    <citem name="uploadpath" value="/upload"></citem>
+    <citem name="httppath" value="/upload"></citem>
+    <citem name="templateBasePath" value="/upload"></citem>
+    <citem name="downloadpath" value=""></citem>
+  </consts>
+</module>

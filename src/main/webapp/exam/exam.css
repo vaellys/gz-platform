@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+/*以下是登陆界面*/
+body,input,h1,button,label,ul,li{margin:0;padding:0;font-family:"微软雅黑";list-style:none;}
+#big_body{height:100%;width:100%;background:url(image/body_bg.png) no-repeat 0 200px #f0f5fb;}
+.login_interface{width:543px;height:460px;margin-left:435px;padding-top:50px;}
+.heads{height:108px;}
+.heads h1{width:432px;height:108px;line-height:108px;padding-left:90px;float:left;background:url(image/header_bg.gif) repeat-x;font-weight:normal;letter-spacing:20px;font-size:32px;color:#3d9af9;}
+.heads .header_left{width:10px;height:108px;display:inline-block;float:left;background:url(image/header_left.gif) no-repeat;}
+.heads .header_right{width:11px;height:108px;display:inline-block;float:right;background:url(image/header_right.gif) no-repeat;}
+.heads h1 .letter_bg{display:inline-block;width:98px;height:95px;background:url(image/abc.png) no-repeat;float:right;margin:9px 16px 0 0;}
+/*content*/
+.login_interface .content{width:543px;height:352px;}
+.content .content_right{width:6px;height:352px;float:right;background:url(image/content_bg_right.gif) no-repeat;}
+.content .content_bottom{width:541px;height:15px;float:right;margin-right:3px;background:url(image/content_bg_bottom.png) no-repeat;margin-top:-14px;}
+.content .login_content{width:537px;height:342px;background:#3e99f9;float:left;}
+.login_content .username,.login_content .password{font-size:24px;color:#FFF;float:left;}
+.login_content input{width:230px;height:40px;}
+.login_content .username{margin:0px 0 26px 85px;}
+.login_content .password{margin:20px 0 30px 108px;}
+.login_content .login_button{width:110px;height:30px;line-height:25px;text-align:center;background:url(image/login_button1.gif) repeat-x;border:none;font-size:18px;margin:13px 0 0 200px;}
+.login_content .login_button:hover{background:url(image/login_button2.gif) repeat-x;}
+
+
+/*以下是答题界面*/
+#test_body{height:100%;width:100%;background:url(image/kongzi.png) no-repeat left bottom #A1D0D8;}
+.test{width:820px;margin:15px auto 0;}
+.test .test_papper{font-size:30px;text-align:center;margin-bottom:15px;}
+.test .examhead{width:820px;}
+.examhead .warn,.examhead .clock{display:inline-block;font-size:19px;font-family:"微软雅黑";}
+.examhead .warn{background:url(image/warn.png) no-repeat left center;padding-left:25px;margin-left:-160px;}
+.examhead .clock{background:url(image/clock.png) no-repeat left center;float:right;padding-left:27px;margin-right:30px;}
+.examhead .warn strong,.examhead .clock strong{font-weight:normal;color:#F03;font-size: 24px;}
+.examhead .test_content{width:820px;height:517px;margin-top:9px;}
+.test_content .content_left{width:210px;float:left;}
+.test_content .content_right{float：left;word-break:break-all;}
+.content_left .text_left{width:25px;height:497px;float:left;background:url(image/bg_left.gif) no-repeat 0 2px;margin-top:2px;}
+.content_left .text_right{width:26px;height:497px;float:right;background:url(image/link_bg.gif) no-repeat 0 2px;}
+.content_left .text_center{width:159px;height:497px;float:left;background:url(image/bg_center.gif) repeat-x 0 2px;margin-top:2px;}
+.text_center .text1{display:inline-block;height:100px;text-align:center; word-spacing:50px;margin:15px 0 15px 0;}
+.text_center .text1 div{font-size:28px;font-family:"微软雅黑";text-align:center;width:159px;}
+.text_center .text2{display:inline-block;width:159px;height:140px;text-align:center;font-size:24px;font-family:"微软雅黑";color:#F00;}
+.text_center .text3{font-size:24px;font-family:"微软雅黑";color:#F00;text-align:center;}
+.content_right{display:inline-block;}
+.content_right .test_left{ background:url(image/right_content_bg.gif) repeat-x;display:inline-block;padding:27px 1px;word-break:break-all;width:587px;height:440px;margin-top:2px;float:left;position:relative;}
+.content_right .test_right{width:21px;height:497px;float:right;background:url(image/right_content_bg_right.gif) no-repeat;float:right;margin-top:2px;}
+.test_option{font-family:"微软雅黑";font-size:20px;text-align: left;margin-left:60px;}
+.test_option .question{margin-bottom:25px;}
+.test_option li,label,strong{margin-bottom:20px;font-size:24px;}
+.test_option input{margin-left:10px;}
+.question{font-family:"微软雅黑";font-size:24px;margin:35px 0 20px 45px;text-align:left;line-height:28px;}
+.test_left .next_question{border:none;width:106px;height:40px;line-height:40px;text-align:center;font-size:24px;font-family:"微软雅黑";color:#000;text-decoration:none;position:absolute;top:405px;left:260px;display:inline-block;background:url(image/button_bg2.gif) repeat-x;}
+.test_left .next_question:hover{background:url(image/button_bg1.gif) repeat-x;}
+.explain{width:820px;margin-top:15px;font-size:14px;font-family:"微软雅黑";display:none;}
+
+/*以下是测试成功提醒*/
+
+.test_success_text{min-height:150px;font-size:25px;margin-top:20px;display:inline-block;color:#3DAB2C;}
+.test_success{width:640px;background:#91C7E8;border:5px solid #96B7D9;margin:140px auto 20px;}
+.test_success span{height:40px;font-size:30px;padding-left:30px;display:inline-block;color:#3DAB2C;padding-top:11px;}
+
+.test_success .buttons{width:97px;height:34px;display:inline-block;margin:55px 0 0 260px;line-height:34px;text-align:center;font-size:20px;background:url(image/buttonbg1.gif) repeat-x;float:left;}
+
+.test_success a:hover{background:url(image/buttonbg2.gif) repeat-x;} 
+
+
+
+
+
+/*以后加验证码可能用得到
+<label class="authentication_number">验证码：<input /><span class="photo"></span></label>
+<a class="change" href="#">看不清楚？</a>
+.login_content .authentication_number{font-size:24px;color:#FFF;float:left;margin:0 0 40px 85px;}
+.login_content .authentication_number input{width:115px;}
+.login_content .photo{width:93px;height:40px;display:inline-block;margin-left:20px;float:right;margin-top:1px;background:#FFF;}
+.login_content .change{display:inline-block;color:#FFF;margin:230px 0 0 -82px;text-decoration:none;}*/

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="cmstpl">
+	<description>模板管理</description>
+	<menu baseUrl="http://223.202.64.204:50481/cms">
+		<node code="tpl010000" parentCode="cms" name="模板管理" type="Catalog" showOrder="1" newpage="false" icon="cms-c-template-icon">
+			<nodes>
+				<node code="tpl010600" name="资源管理" type="Action" showOrder="1" newpage="false" icon="cms-m-template-res-icon">
+					<action>/cms/resource/index.mvc;/cms/resource/left.mvc;/cms/resource/tree.mvc;/cms/resource/list.mvc;/cms/resource/right.mvc</action>
+					<nodes>
+						<node code="tpl010601" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/resource/toadd.mvc;/cms/resource/add.mvc</action>
+						</node>
+						<node code="tpl010602" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/resource/toedit.mvc;/cms/resource/edit.mvc</action>
+						</node>
+						<node code="tpl010603" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/resource/delete.mvc</action>
+						</node>
+						<node code="tpl010604" name="上传文件" showOrder="4" newpage="false" type="Operate">
+							<action>/cms/resource/swfupload.mvc</action>
+						</node>
+						<node code="tpl010605" name="创建目录" showOrder="5" newpage="false" type="Operate">
+							<action>/cms/resource/createDir.mvc</action>
+						</node>
+						<node code="tpl010606" name="重命名" showOrder="6" newpage="false" type="Operate">
+							<action>/cms/resource/rename.mvc;/cms/resource/renamesubmit.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="tpl010800" name="模板管理" type="Action" showOrder="2" newpage="false" icon="cms-m-template-tpl-icon">
+					<action>/cms/tpl/index.mvc;/cms/tpl/left.mvc;/cms/tpl/tree.mvc;/cms/tpl/list.mvc;/cms/tpl/right.mvc</action>
+					<!-- <action>/cms/tpl/list.mvc</action> -->
+					<nodes>
+						<node code="tpl010801" name="添加模板" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/tpl/createdir.mvc;/cms/tpl/toadd.mvc;/cms/tpl/add.mvc</action>
+						</node>
+						<node code="tpl010802" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/tpl/toedit.mvc;/cms/tpl/edit.mvc</action>
+						</node>
+						<node code="tpl010803" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/tpl/delete.mvc;/cms/tpl/deletesingle.mvc</action>
+						</node>
+						<!-- 
+						<node code="tpl010804" name="上传文件" showOrder="4" newpage="false">
+							<action>/cms/tpl/swfupload.mvc</action>
+						</node>
+						 -->
+						<node code="tpl010805" name="新建目录" showOrder="5" newpage="false" type="Operate">
+							<action>/cms/resource/createDir.mvc</action>
+						</node>
+						<node code="tpl010806" name="重命名" showOrder="5" newpage="false" type="Operate">
+							<action>/cms/tpl/torename.mvc;/cms/tpl/rename.mvc</action>
+						</node>
+						<!-- 
+						<node code="tpl010808" name="导入导出" showOrder="8" newpage="false">
+							<action>/cms/tpl/export.mvc;/cms/tpl/import.mvc</action>
+						</node>
+						 -->
+					</nodes>
+				</node>
+
+			</nodes>
+		</node>
+	</menu>
+	<consts>
+		<!-- 模板根目录 -->
+		<citem name="tplbasepath" value="E:\cms\template"></citem>
+		<!-- 资源根目录 -->
+		<citem name="resbasepath" value="E:\java\apache-tomcat-7.0.54\webapps\ROOT"></citem>
+	</consts>
+</module>

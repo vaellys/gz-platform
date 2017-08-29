@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="other" title="其他管理" showOrder="999" icon="other-icon">
+	<description>应用市场</description>
+	<menu baseUrl="http://223.202.64.204:50813">
+	    <node code="appmart010000" name="应用市场管理" type="Catalog" showOrder="1" icon="appmart-c-icon" newpage="false">
+			<nodes>
+				<node code="appmart010100" name="应用市场管理" showOrder="1" newpage="false" type="Action" icon="appmart-m-manage-icon">
+					<action>/reps/admin/appinfo/list.mvc</action>
+					<nodes>
+						<node code="appmart010101" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/reps/admin/appinfo/toadd.mvc;/reps/admin/appinfo/add.mvc</action>
+						</node>
+						<node code="appmart010102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/reps/admin/appinfo/toedit.mvc;/reps/admin/appinfo/edit.mvc</action>
+						</node>
+						<node code="appmart010103" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/reps/admin/appinfo/delete.mvc</action>
+						</node>
+						<node code="appmart010104" name="查看" showOrder="4" newpage="false" type="Operate">
+							<action>/reps/admin/appinfo/show.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="appmart010200" name="应用评论管理" showOrder="1" newpage="false" type="Action" icon="appmart-m-comment-icon">
+					<action>/reps/admin/comment/list.mvc;/reps/admin/comment/delete.mvc</action>
+				</node>
+			</nodes>
+		</node>
+	</menu>
+</module>

@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="res" title="资源管理" showOrder="80" icon="resource-icon">
+	<description>this is a test</description>
+	<menu baseUrl="http://10.0.200.107:8082/">
+		<node code="res010000" name="资源云平台" type="Catalog" showOrder="1" icon="basicdata" newpage="false">
+			<nodes>
+				<node code="res010100" name="资源目录" showOrder="1" newpage="false" type="Action" icon="resource-m-folder-icon">
+					<action>/res/catalog/index.mvc;/res/catalog/left.mvc;/res/catalog/list.mvc</action>
+					<nodes>
+						<node code="res010110" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/res/catalog/toadd.mvc;/res/catalog/add.mvc;/res/catalog/toaddtop.mvc;/res/catalog/addtop.mvc</action>
+						</node>
+						<node code="res010120" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/res/catalog/toedit.mvc;/res/catalog/edit.mvc;/res/catalog/save.mvc</action>
+						</node>
+						<node code="res010130" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/res/catalog/delete.mvc</action>
+						</node>
+						<node code="res010140" name="详细" showOrder="4" type="Operate"> 
+							<action>/res/catalog/detail.mvc</action>
+						</node>
+						<node code="res010150" name="查看" showOrder="5" type="Operate"> 
+							<action>/res/catalog/check.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="res010600" name="空间类型" showOrder="1" newpage="false" type="Action" icon="resource-m-space-type-icon">
+					<action>/res/spacetype/list.mvc</action>
+					<nodes>
+						<node code="res060110" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/res/spacetype/toadd.mvc;/res/spacetype/add.mvc</action>
+						</node>
+						<node code="res060120" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/res/spacetype/toedit.mvc;/res/spacetype/edit.mvc</action>
+						</node>
+						<node code="res060130" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/res/spacetype/delete.mvc</action>
+						</node>
+						<node code="res060140" name="详细" showOrder="4" type="Operate"> 
+							<action>/res/spacetype/detail.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="res030100" name="空间管理" showOrder="1" newpage="false" type="Action" icon="resource-m-space-icon">
+					<action>/res/space/list.mvc</action>
+					<nodes>
+						<node code="res030101" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/res/space/toadd.mvc;/res/space/add.mvc;/res/space/save.mvc</action>
+						</node>
+						<node code="res030102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/res/space/toedit.mvc;/res/space/edit.mvc</action>
+						</node>
+						<!-- 
+						<node code="res030103" name="启用/停用" showOrder="3" newpage="false" type="Operate">
+							<action>/res/space/openorclose.mvc</action>
+						</node>
+						 -->
+						<node code="res030104" name="删除" showOrder="4" newpage="false" type="Operate">
+							<action>/res/space/delete.mvc</action>
+						</node>
+						<node code="res030105" name="置顶" showOrder="5" newpage="false" type="Operate">
+							<action>/res/space/setTop.mvc</action>
+						</node>
+						<node code="res030106" name="分配管理员" showOrder="5" newpage="false" type="Operate">
+							<action>/res/space/manager/list.mvc;/res/space/manager/add.mvc;/res/space/manager/delete.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="res010200" name="资源列表" showOrder="1" newpage="false" type="Action" icon="resource-m-list-icon">
+					<action>/res/info/list.mvc;/res/info/catalogtree.mvc</action>
+					<nodes>
+						<node code="res010201" name="预览" showOrder="10" newpage="false" type="Operate">
+							<action>/res/info/preview.mvc</action>
+						</node>
+						<node code="res010210" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/res/info/toadd.mvc;/res/info/add.mvc;/res/info/save.mvc;</action>
+						</node>
+						<node code="res010220" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/res/info/toedit.mvc;/res/info/edit.mvc;/res/info/save.mvc</action>
+						</node>
+						<node code="res010230" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/res/info/delete.mvc;/res/info/batchdelete.mvc</action>
+						</node>
+						<node code="res010240" name="资源分类目录选择" showOrder="4" newpage="false" type="Operate">
+							<action>/res/catalog/tree.mvc</action>
+						</node>
+						<node code="res010250" name="用户目录选择" showOrder="5" newpage="false" type="Operate">
+							<action>/res/info/usertree.mvc</action>
+						</node>
+						<node code="res010260" name="置顶" showOrder="6" newpage="false" type="Operate">
+							<action>/res/info/addrestop.mvc</action>
+						</node>
+						<!-- 
+						<node code="res010270" name="推荐" showOrder="7" newpage="false" type="Operate">
+							<action>/res/info/recommendres.mvc</action>
+						</node>
+						 -->
+						<node code="res010280" name="教材选择" showOrder="8" newpage="false" type="Operate">
+							<action>/res/book/choose.mvc;/res/info/booktree.mvc;</action>
+						</node>
+						<node code="res010290" name="教材章节选择" showOrder="9" newpage="false" type="Operate">
+							<action>/res/info/bookcatalogtree.mvc;/res/info/bookcatalogflag.mvc</action>
+						</node>
+						
+					</nodes>
+				</node>
+				<node code="res010300" name="敏感词" showOrder="1" newpage="false" type="Action" icon="resource-m-words-icon">
+					<action>/res/swords/list.mvc</action>
+					<nodes>
+						<node code="res010310" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/res/swords/toadd.mvc;/res/swords/add.mvc</action>
+						</node>
+						<node code="res010320" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/res/swords/toedit.mvc;/res/swords/edit.mvc;/res/swords/save.mvc</action>
+						</node>
+						<node code="res010330" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/res/swords/delete.mvc</action>
+						</node>
+						<node code="res010340" name="更新过滤索引" showOrder="3" newpage="false" type="Operate">
+							<action>/res/swords/reload.mvc</action>
+						</node>
+					</nodes>
+				</node>
+			 	<node code="res010400" name="教材管理" showOrder="1" newpage="false" type="Action" icon="resource-m-book-icon">
+					<action>/reps/book/list.mvc</action>
+					<nodes>
+						<node code="res010410" name="添加" showOrder="2" newpage="false" type="Operate">
+							<action>/reps/book/toadd.mvc;/reps/book/add.mvc</action>
+						</node>
+						<node code="res010420" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/reps/book/edit.mvc;/reps/book/toedit.mvc</action>
+						</node>
+						<node code="res010430" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/reps/book/delete.mvc</action>
+						</node>
+						<node code="res010440" name="详细" showOrder="4" newpage="false" type="Operate">
+							<action>/reps/book/todetect.mvc</action>
+						</node>
+						<node code="res010450" name="添加章节" showOrder="5" newpage="false" type="Operate">
+							<action>
+								/reps/book/addbookcatalogindex.mvc;
+								/reps/book/addbookcatalogleft.mvc;
+								/reps/book/tobookcataloglist.mvc;
+								/reps/book/toaddbookcatalog.mvc;
+								/reps/book/addbookcatalog.mvc;
+								/res/book/chooseResInfo.mvc;
+							</action>
+						</node>
+						<node code="res010460" name="修改章节" showOrder="6" newpage="false" type="Operate">
+							<action>/reps/book/toeditbookcatalog.mvc;/reps/book/editbookcatalog.mvc;</action>
+						</node>
+						<node code="res010480" name="删除章节" showOrder="7" newpage="false" type="Operate">
+							<action>/reps/book/deletebookcatalog.mvc;</action>
+						</node>
+						<node code="res010470" name="资源" showOrder="8" newpage="false" type="Operate">
+							<action>/res/book/showCatalogIndex.mvc;
+									/res/book/showCatalogList.mvc;
+									/res/book/showCatalogLeft.mvc;
+									/res/book/selectreslist.mvc;
+									/res/info/preview.mvc;
+									/res/book/addResInfo.mvc;
+							</action>
+						</node>
+					</nodes>
+			 	</node>
+				<node code="res010500" name="回收站" showOrder="1" newPage="false" type="Action" icon="resource-m-recycle-icon">
+					<action>/res/recycle/list.mvc</action>
+					<nodes>
+						<node code="res010510" name="查看" showOrder="1" newpage="false" type="Operate">
+							<action>/res/recycle/view.mvc</action>
+						</node>
+						<node code="res010520" name="还原" showOrder="2" newpage="false" type="Operate">
+							<action>/res/recycle/revert.mvc</action>
+						</node>
+						<node code="res010530" name="彻底删除" showOrder="3" newpage="false" type="Operate">
+							<action>/res/recycle/completelydelete.mvc</action>
+						</node>
+						<node code="res010540" name="预览" showOrder="2" newpage="false" type="Operate">
+							<action>/res/info/preview.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="res040100" name="图片管理" showOrder="1" newpage="false" type="Action" icon="resource-m-picture-icon">
+					<action>/res/index/list.mvc</action>
+					<nodes>
+						<node code="res040101" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/res/index/toadd.mvc;/res/index/add.mvc</action>
+						</node>
+						<node code="res040102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/res/index/toedit.mvc;/res/index/edit.mvc</action>
+						</node>
+						<node code="res040103" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/res/index/delete.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="res070100" name="资源链接管理" showOrder="1" newpage="false" type="Action" icon="resource-m-link-icon">
+					<action>/res/link/list.mvc</action>
+					<nodes>
+						<node code="res070101" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/res/link/toadd.mvc;/res/link/add.mvc</action>
+						</node>
+						<node code="res070102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/res/link/toedit.mvc;/res/link/edit.mvc</action>
+						</node>
+						<node code="res070103" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/res/link/delete.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="res050100" name="推荐资源管理" showOrder="1" newpage="false" type="Action" icon="resource-m-commended-icon">
+					<action>/res/info/recommend/list.mvc</action>
+					<nodes>
+						<node code="res050101" name="设置推荐资源" showOrder="1" newpage="false" type="Operate">
+							<action>/res/info/recommendres.mvc</action>
+						</node>
+						<node code="res050102" name="预览" showOrder="2" newpage="false" type="Operate">
+							<action>/res/info/preview.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="res060100" name="审核资源管理" showOrder="1" newpage="false" type="Action" icon="resource-m-check-icon">
+					<action>/res/info/approve/list.mvc</action>
+					<nodes>
+						<node code="res060101" name="添加审核" showOrder="1" newpage="false" type="Operate">
+							<action>/res/info/toapprove.mvc;/res/info/approve.mvc</action>
+						</node>
+						<node code="res060102" name="预览" showOrder="2" newpage="false" type="Operate">
+							<action>/res/info/preview.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<!--
+				<node code="cms010500" name="内容管理" showOrder="5" newpage="false" type="Action">
+					<action>/cms/content/index.mvc;/cms/content/list.mvc;/cms/content/right.mvc</action>
+					<nodes>
+						<node code="cms010501" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/content/toadd.mvc;/cms/content/add.mvc</action>
+						</node>
+						<node code="cms010502" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/content/toedit.mvc;/cms/content/edit.mvc</action>
+						</node>
+						<node code="cms010503" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/content/delete.mvc</action>
+						</node>
+						<node code="cms010504" name="详细" showOrder="4" newpage="false" type="Operate">
+							<action>/cms/content/detail.mvc</action>
+						</node>
+						<node code="cms010505" name="置项" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/content/changetop.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				-->
+			</nodes>
+		</node>
+		<node code="res020000" name="资源(学校)空间" type="Catalog" showOrder="2" icon="basicdata" newpage="false">
+			<nodes>
+				<!-- 
+				<node code="res020100" name="空间申请" showOrder="1" newpage="false" type="Action">
+					<action>/res/spaceapply/list.mvc</action>
+					<nodes>
+						<node code="res020101" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/res/spaceapply/toadd.mvc;/res/spaceapply/add.mvc;/res/spaceapply/selectspacelist.mvc</action>
+						</node>
+						<node code="res020102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/res/spaceapply/toedit.mvc;/res/spaceapply/edit.mvc</action>
+						</node>
+						<node code="res020103" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/res/spaceapply/delete.mvc</action>
+						</node>
+						<node code="res020104" name="审核" showOrder="4" newpage="false" type="Operate">
+							<action>/res/spaceapply/toaudit.mvc;/res/spaceapply/audit.mvc</action>
+						</node>
+						<node code="res020105" name="详细" showOrder="5" newpage="false" type="Operate">
+							<action>/res/spaceapply/check.mvc;/res/spaceapply/showcheck.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				 -->
+				<node code="res020200" name="资源(学校)空间" showOrder="2" newpage="false" type="Action" icon="resource-m-space-school-icon">
+					<action>/res/spaceinfo/list.mvc;
+					
+							/res/spaceinfo/toedit.mvc;
+							/res/spaceinfo/edit.mvc;
+					
+							/res/spaceinfo/move.mvc;
+							/res/spaceinfo/manageuser.mvc;
+							/res/spaceinfo/usermanage.mvc;
+							/res/spaceinfo/add.mvc;
+							/res/spaceinfo/save.mvc;
+							/res/spaceinfo/delete.mvc;
+							/res/spaceinfo/resinfomanage.mvc;
+							/res/spaceinfo/resinfolist.mvc;
+							/res/spaceinfo/editInfo.mvc;
+							/res/spaceinfo/viewinfo.mvc;
+							/res/spaceinfo/saveInfo.mvc;
+							/res/spaceinfo/approve/view/sharelevel.mvc;
+							/res/spaceinfo/approve/save.mvc;
+							/res/spaceinfo/catalogmove.mvc;
+							/res/spaceinfo/choose.mvc;
+							/res/spaceinfo/bookChoose.mvc;
+							/res/spaceinfo/setTop.mvc;
+							/res/spaceinfo/recommendres.mvc;
+							/res/spaceinfo/linkBookCatalog.mvc;
+							/res/info/preview.mvc;
+							/res/info/usertree.mvc;
+							/res/info/catalogtree.mvc;
+							/res/info/bookcatalogtree.mvc;
+							
+							/res/book/choose.mvc;
+							
+							/res/catalog/tree.mvc;
+					</action>
+					<!-- 
+					<nodes>
+						<node code="res020201" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/res/spaceinfo/add.mvc;/res/spaceinfo/save.mvc</action>
+						</node>
+						<node code="res020203" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/res/spaceinfo/delete.mvc</action>
+						</node>
+						<node code="res020204" name="人员管理" showOrder="4" newpage="false" type="Operate">
+							<action>/res/spaceinfo/usermanage.mvc</action>
+						</node>
+						<node code="res020205" name="资源管理" showOrder="5" newpage="false" type="Operate">
+							<action>/res/spaceinfo/resinfomanage.mvc;
+									/res/spaceinfo/resinfolist.mvc;
+									/res/spaceinfo/editInfo.mvc;
+									/res/spaceinfo/viewinfo.mvc;
+									/res/spaceinfo/approve/view/sharelevel.mvc;
+									/res/spaceinfo/approve/save.mvc;
+									/res/spaceinfo/catalogmove.mvc;
+									/res/spaceinfo/choose.mvc;
+									/res/spaceinfo/bookChoose.mvc;
+									/res/spaceinfo/setTop.mvc;
+									/res/spaceinfo/recommendres.mvc;
+									/res/spaceinfo/linkBookCatalog.mvc;
+									/res/info/preview.mvc;
+							</action>
+						</node>
+						<node code="res020206" name="编辑" showOrder="6" newpage="false" type="Operate">
+							<action>/res/spaceinfo/toedit.mvc;/res/spaceinfo/edit.mvc</action>
+						</node>
+					</nodes>
+					 -->
+				</node>
+			</nodes>
+		</node>
+		<node code="res070000" name="资源统计" type="Catalog" showOrder="3" icon="basicdata" newpage="false">
+			<nodes>
+				<!-- 
+				<node code="res070100" name="统计明细浏览" showOrder="1" newpage="false" type="Action">
+					<action>/res/tj/list.mvc</action>
+					<nodes>
+						<node code="res070101" name="统计" showOrder="1" newpage="false" type="Operate">
+							<action>/res/tj/dostat.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				 -->
+				<!-- 按地市级汇总 -->
+				<!-- 按区县汇总 -->
+				<!-- 按乡镇汇总-->
+				<!-- 按学校汇总-->
+				<node code="res070600" name="按学校汇总" showOrder="6" newpage="false" type="Action" icon="resource-m-tj-school-icon">
+					<action>/res/tj/orglist.mvc</action>
+					<nodes>
+						<node code="res070601" name="统计" showOrder="1" newpage="false" type="Operate">
+							<action>/res/tj/dostat.mvc</action>
+						</node>
+						<node code="res070602" name="导出" showOrder="1" newpage="false" type="Operate">
+							<action>/res/tj/excel/export.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="res070700" name="按空间类型汇总" showOrder="6" newpage="false" type="Action" icon="resource-m-tj-space-icon">
+					<action>/res/tj/spacetypelist.mvc</action>
+					<nodes>
+						<node code="res070701" name="统计" showOrder="1" newpage="false" type="Operate">
+							<action>/res/tj/dostat.mvc</action>
+						</node>
+						<node code="res070702" name="导出" showOrder="1" newpage="false" type="Operate">
+							<action>/res/tj/excel/export.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="res070800" name="按资源类型汇总" showOrder="6" newpage="false" type="Action" icon="resource-m-tj-res-icon">
+					<action>/res/tj/restypelist.mvc</action>
+					<nodes>
+						<node code="res070801" name="统计" showOrder="1" newpage="false" type="Operate">
+							<action>/res/tj/dostat.mvc</action>
+						</node>
+						<node code="res070802" name="导出" showOrder="1" newpage="false" type="Operate">
+							<action>/res/tj/excel/export.mvc</action>
+						</node>
+					</nodes>
+				</node>
+			</nodes>
+		</node>
+	</menu>
+	<security>
+		<authc>/reps/res/sys/chooseorganize/single.mvc</authc>
+		<authc>/reps/res/sys/chooseuser/single.mvc</authc>
+		<nologin>/library/ueditor/**</nologin>
+		<nologin>/res/spaceinfo/useamount.mvc</nologin><!-- 更新空间使用量，可以使用任务定时器更新 -->
+		<authc>/reps/common/upload.mvc</authc>
+		<authc>/admin.mvc</authc>
+	</security>
+	<consts>
+		<citem name="ResFilePath" value="" />
+		<citem name="ResViewPath" value="" />
+	</consts>
+</module>

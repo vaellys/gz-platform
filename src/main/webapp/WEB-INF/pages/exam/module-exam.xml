@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="exam" title="教学质量检测" showOrder="30" icon="jxzljc-icon">
+  <description>题库管理，问卷管理</description>
+  <menu>
+   <node code="exam010000" name="基础数据管理" type="Catalog" showOrder="1" icon="jxzljc-c-data-icon" newpage="false">
+      <nodes>
+           <!-- 
+           <node code="exam010100" name="题库管理" showOrder="4" newpage="false" type="Action">
+             <action>/reps/exam/praxislib/list.mvc</action>
+             <nodes>
+        	   <node code="exam010101" name="添加题库" showOrder="1" type="Operate">
+        	      <action>/reps/exam/praxislib/add.mvc;/reps/exam/praxislib/save.mvc</action>
+        	   </node>
+        	   <node code="exam010102" name="修改题库" showOrder="1" type="Operate">
+        	      <action>/reps/exam/praxislib/edit.mvc;/reps/exam/praxislib/save.mvc</action>
+        	   </node>
+        	   <node code="exam010103" name="删除题库" showOrder="1" type="Operate">
+        	      <action>/reps/exam/praxislib/delete.mvc</action>
+        	   </node>
+        	 </nodes>
+           </node>
+           -->
+           <node code="exam010200" name="试题分类" showOrder="4" newpage="false" type="Action" icon="jxzljc-m-page-catelog-icon">
+             <action>/reps/exam/ptyle/list.mvc</action>
+             <nodes>
+        	   <node code="exam010201" name="添加" showOrder="1" type="Operate">
+        	      <action>/reps/exam/ptyle/add.mvc;/reps/exam/ptyle/save.mvc;/reps/exam/ptyle/checkptypeexist.mvc</action>
+        	   </node>
+        	   <node code="exam010202" name="修改" showOrder="1" type="Operate">
+        	      <action>/reps/exam/ptyle/edit.mvc;/reps/exam/ptyle/save.mvc</action>
+        	   </node>
+        	   <node code="exam010203" name="删除" showOrder="1" type="Operate">
+        	      <action>/reps/exam/ptyle/delete.mvc</action>
+        	   </node>
+        	   <node code="exam010204" name="详细" showOrder="1" type="Operate">
+        	      <action>/reps/exam/ptyle/detail.mvc</action>
+        	   </node>
+        	 </nodes>
+           </node>
+           <!--
+           <node code="exam010300" name="试题管理" showOrder="4" newpage="false" type="Action">
+             <action>/reps/exam/praxis/list.mvc</action>
+             <nodes>
+        	   <node code="exam010301" name="添加试题" showOrder="1" type="Operate">
+        	      <action>/reps/exam/praxis/add.mvc;/reps/exam/praxis/save.mvc</action>
+        	   </node>
+        	   <node code="exam010302" name="修改试题" showOrder="1" type="Operate">
+        	      <action>/reps/exam/praxis/edit.mvc;/reps/exam/praxis/save.mvc</action>
+        	   </node>
+        	   <node code="exam010303" name="删除试题" showOrder="1" type="Operate">
+        	      <action>/reps/exam/praxis/delete.mvc;/reps/exam/praxis/del.mvc</action>
+        	   </node>
+        	   <node code="exam010304" name="导入试题" showOrder="1" type="Operate">
+        	      <action>/reps/exam/praxis/import.mvc;
+        	      	/reps/exam/praxis/next.mvc;
+        	      	/reps/exam/praxis/upload.mvc;
+        	      	/reps/exam/praxis/readword.mvc
+        	      </action>
+        	   </node>
+        	  </nodes>
+           </node>
+           -->
+      </nodes>
+    </node> 
+    <node code="exam020000" name="问卷管理" type="Catalog" showOrder="1" icon="jxzljc-c-question-icon" newpage="false">
+      <nodes>
+           <node code="exam020400" name="问卷管理" showOrder="4" newpage="false" type="Action" icon="jxzljc-m-question-icon">
+             <action>/reps/exam/paper/list2.mvc;/reps/exam/paper/save.mvc</action>
+             <nodes>
+        	   <!-- <node code="exam020401" name="导出量表" showOrder="1" type="Operate">
+        	      <action>/reps/exam/paper/exp.mvc</action>
+        	   </node> -->
+        	   <node code="exam020402" name="修改" showOrder="2" type="Operate">
+        	      <action>/reps/exam/paper/edit.mvc;/reps/exam/paper/save.mvc</action>
+        	   </node>
+        	   <node code="exam020403" name="删除" showOrder="3" type="Operate">
+        	      <action>/reps/exam/paper/delete.mvc</action>
+        	   </node>
+        	   <node code="exam020404" name="添加" showOrder="4" type="Operate">
+        	      <action>/reps/exam/paper/add.mvc</action>
+        	   </node>
+        	   <node code="exam020405" name="组卷" showOrder="5" type="Operate">
+        	      <action>
+	        	      /reps/exam/paper/editpraxis.mvc;
+	        	      /reps/exam/paper/save.mvc;
+	        	      /reps/exam/paper/praxisadd.mvc;
+	        	      /reps/exam/paper/praxissave.mvc;
+	        	      /reps/exam/paper/newPraxis.mvc;
+	        	      /reps/exam/paper/randompraxis.mvc;
+	        	      /reps/exam/paper/choosepraxis.mvc;
+	        	      /reps/exam/paper/savepraxis.mvc;
+	        	      /reps/exam/paper/choosepaper.mvc;
+	        	      /reps/exam/paper/right.mvc;
+	        	      /reps/exam/paper/selectpaper.mvc;
+	        	      /reps/exam/praxis/papereditpraxis.mvc;
+	        	      /reps/exam/praxis/papershowpraxis.mvc;
+	        	      /reps/exam/praxis/editsave.mvc;
+	        	      /reps/exam/praxis/del.mvc    	      
+        	      </action>
+        	   </node>
+        	   <node code="exam020406" name="复制问卷" showOrder="6" type="Operate">
+        	      <action>/reps/exam/paper/copy.mvc</action>
+        	   </node>
+        	   <node code="exam020407" name="发布" showOrder="7" type="Operate">
+        	      <action>/reps/exam/paper/publish.mvc</action>
+        	   </node>
+        	   <node code="exam020408" name="预览问卷" showOrder="7" type="Operate">
+        	      <action>/reps/exam/paper/showpaper.mvc</action>
+        	   </node>
+        	   <node code="exam020409" name="详细" showOrder="8" type="Operate">
+        	      <action>/reps/exam/paper/detail.mvc</action>
+        	   </node>
+        	 </nodes>
+           </node>
+      </nodes>
+    </node>
+    <node code="exam030000" name="调查项目" type="Catalog" showOrder="1" icon="jxzljc-c-investigate-icon" newpage="false">
+      <nodes>
+           <node code="exam030100" name="本校设置" showOrder="4" newpage="false" type="Action" icon="jxzljc-m-myschool-setting-icon">
+             <action>/reps/exam/school/setting.mvc</action>
+             <nodes>
+        	   <node code="exam030101" name="保存" showOrder="1" type="Operate">
+        	      <action>/reps/exam/school/save.mvc</action>
+        	   </node>
+       	     </nodes>
+           </node>
+           <node code="exam030300" name="学校设置" showOrder="1" newpage="false" type="Action" icon="jxzljc-m-school-setting-icon">
+             <action>/reps/exam/school/list.mvc</action>
+             <nodes>
+        	   <node code="exam030301" name="保存" showOrder="1" type="Operate">
+        	      <action>/reps/exam/school/toedit.mvc;/reps/exam/school/save.mvc</action>
+        	   </node>
+        	   <node code="exam030302" name="修改" showOrder="1" type="Operate">
+        	      <action>/reps/exam/school/toedit.mvc;/reps/exam/school/edit.mvc</action>
+        	   </node>
+			   <!-- 
+        	   <node code="exam030303" name="批量操作" showOrder="1" type="Operate">
+        	      <action>/reps/exam/school/batch.mvc</action>
+        	   </node>
+			   -->
+       	     </nodes>
+           </node>
+           <node code="exam030200" name="项目管理" showOrder="4" newpage="false" type="Action" icon="jxzljc-m-item-icon">
+             <action>/reps/exam/project/list.mvc</action>
+             <nodes>
+             	<node code="exam030201" name="添加" showOrder="1" type="Operate">
+        	      <action>/reps/exam/project/toadd.mvc;/reps/exam/project/save.mvc;/reps/exam/paper/dialog.mvc</action>
+        	   </node>
+        	   <node code="exam030202" name="修改" showOrder="2" type="Operate">
+        	   		<action>/reps/exam/project/toedit.mvc;/reps/exam/project/save.mvc;/reps/exam/paper/updatecombook.mvc</action>
+        	   </node>
+        	   <node code="exam030203" name="删除" showOrder="3" type="Operate">
+        	   		<action>/reps/exam/project/delete.mvc</action>
+        	   </node>
+        	   <node code="exam030204" name="场次设置" showOrder="4" type="Operate">
+        	   		<action>/reps/exam/session/list.mvc;/reps/exam/session/reset.mvc</action>
+        	   		<nodes>
+        	   			<node code="exam03020401" name="添加" showOrder="1" type="Operate">
+		        	      <action>/reps/exam/session/toadd.mvc;/reps/exam/session/save.mvc</action>
+		        	   </node>
+		        	   <node code="exam03020402" name="修改" showOrder="2" type="Operate">
+		        	   		<action>/reps/exam/session/toedit.mvc;/reps/exam/session/save.mvc</action>
+		        	   </node>
+		        	   <node code="exam03020403" name="删除" showOrder="3" type="Operate">
+		        	   		<action>/reps/exam/session/delete.mvc</action>
+		        	   </node>
+        	   		</nodes>
+        	   </node>
+        	   <node code="exam030205" name="抽样设置" showOrder="5" type="Operate">
+        	   		<action>
+	        	   		/reps/exam/rule/list.mvc;
+	        	   		/reps/exam/rule/index.mvc;
+	        	   		/reps/exam/rule/toadd.mvc;
+	        	   		/reps/exam/rule/save.mvc;
+	        	   		/reps/exam/rule/toedit.mvc;
+	        	   		/reps/exam/rule/delete.mvc;
+	        	   		/reps/exam/rule/sample.mvc;
+	        	   		/reps/exam/rule/exisrule.mvc;
+	        	   		/reps/exam/sample/toadd.mvc;	        	   		
+	        	   		/reps/exam/sample/save.mvc;
+	        	   		/reps/exam/sample/toedit.mvc;
+	        	   		/reps/exam/sample/save.mvc;
+	        	   		/reps/exam/sample/delsample.mvc
+        	   		</action>
+        	   </node>
+        	   <node code="exam030206" name="发布" showOrder="6" type="Operate">
+        	   		<action>/reps/exam/project/issue.mvc</action>
+        	   </node>
+        	   <node code="exam030207" name="样本数据" showOrder="7" type="Operate">
+        	   		<action>/reps/exam/student/list.mvc;/reps/exam/student/answer.mvc</action>
+        	   </node>
+ 	           <node code="exam030209" name="分卷管理" showOrder="8" type="Operate">
+	             <action>
+	             		/reps/exam/partpaperpraxis/save.mvc;
+	             		/reps/exam/partpaper/index.mvc;
+	             		/reps/exam/partpaper/save.mvc;
+	             		/reps/exam/partpaper/delete.mvc;
+	             		/reps/exam/partpaper/praxistopart.mvc
+	             </action>
+	           </node>
+ 	           <node code="exam030210" name="详细" showOrder="9" type="Operate">
+	             <action>/reps/exam/project/detail.mvc</action>
+	           </node>
+             </nodes>
+           </node>
+	           
+           <node code="exam030400" name="项目查看" showOrder="5" newpage="false" type="Action" icon="jxzljc-m-item-view-icon">
+             <action>/reps/exam/view/projectlist.mvc</action>
+             <nodes>
+        	   <node code="exam030401" name="场次查看" showOrder="1" type="Operate">
+        	      <action>/reps/exam/view/sessionlist.mvc</action>
+        	   </node>
+        	   <!-- <node code="exam030402" name="规则查看" showOrder="2" type="Operate">
+        	      <action>/reps/exam/view/rulelist.mvc</action>
+        	   </node> -->
+        	   <node code="exam030403" name="参考人员" showOrder="3" type="Operate">
+        	      <action>/reps/exam/view/studentlist.mvc</action>
+        	   </node>
+        	   <node code="exam030404" name="下载" showOrder="4" type="Operate">
+        	      <action>/reps/exam/view/export.mvc;/reps/exam/view/downexam.mvc</action>
+        	   </node>
+       	     </nodes>
+           </node>
+           
+      </nodes>
+    </node>
+  </menu>
+   <desk>
+     <item name="最新调查项目" depend="exam030400" iframe="false" icon="examproject" defaultPlace="left">
+		<value>/reps/exam/project/project.mvc;/reps/exam/view/projectlist.mvc;/reps/exam/view/sessionlist.mvc;/reps/exam/view/studentlist.mvc</value>
+     </item>
+ </desk>
+  <security>
+		<nologin>/reps/exam/alone/**</nologin>
+		<authc>/reps/exam/praxis/choose.mvc</authc>
+  </security>
+  <consts>
+		<citem name="uploadpath" value="" />
+		<citem name="downloadpath" value="" />
+	</consts>
+</module>

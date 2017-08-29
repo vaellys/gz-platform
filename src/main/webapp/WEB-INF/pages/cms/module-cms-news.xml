@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="cmsnews" title="新闻报送" showOrder="51" icon="cms-news-icon">
+  <description>新闻报送系统</description>
+  <menu>
+    <node code="news010000" name="新闻报送系统" type="Catalog" showOrder="1" newpage="false" icon="cms-c-news-icon">
+      <nodes>
+        <node code="news010100" name="新闻采集" type="Action" showOrder="1" newpage="false" icon="cms-m-news-collect-icon">
+           <action>/cms/news/submit/list.mvc</action>
+           <nodes>
+				<node code="news010101" name="添加" showOrder="1" newpage="false" type="Operate">
+					<action>/cms/news/submit/toadd.mvc;/cms/news/submit/add.mvc</action>
+				</node>
+				<node code="news010102" name="修改" showOrder="2" newpage="false" type="Operate">
+					<action>/cms/news/submit/toedit.mvc;/cms/news/submit/edit.mvc</action>
+				</node>
+				<node code="news010103" name="删除" showOrder="3" newpage="false" type="Operate">
+					<action>/cms/news/submit/delete.mvc</action>
+				</node>
+				<node code="news010104" name="详细" showOrder="4" newpage="false" type="Operate">
+					<action>/cms/news/submit/detail.mvc</action>
+				</node>
+			</nodes>
+        </node>
+        <node code="news010200" name="新闻采编" type="Action" showOrder="2" newpage="false" icon="cms-m-news-edit-icon">
+           <action>/cms/news/edit/list.mvc</action>
+           <nodes>
+           		<node code="news010201" name="提交待审核" showOrder="1" newpage="false" type="Operate">
+					<action>/cms/news/edit/applycheck.mvc</action>
+				</node>
+				<node code="news010202" name="修改" showOrder="2" newpage="false" type="Operate">
+					<action>/cms/news/edit/toedit.mvc;/cms/news/edit/edit.mvc</action>
+				</node>
+				<node code="news010203" name="删除" showOrder="3" newpage="false" type="Operate">
+					<action>/cms/news/edit/delete.mvc</action>
+				</node>
+				<node code="news010204" name="详细" showOrder="4" newpage="false" type="Operate">
+					<action>/cms/news/edit/detail.mvc</action>
+				</node>
+			</nodes>
+        </node>
+        <node code="news010300" name="新闻审核" type="Action" showOrder="3" newpage="false" icon="cms-m-news-check-icon">
+           <action>/cms/news/check/list.mvc</action>
+           <nodes>
+				<node code="news010301" name="审核" showOrder="1" newpage="false" type="Operate">
+					<action>/cms/news/check/tocheck.mvc;/cms/news/check/check.mvc</action>
+				</node>
+				<node code="news010302" name="详细" showOrder="2" newpage="false" type="Operate">
+					<action>/cms/news/check/detail.mvc</action>
+				</node>
+			</nodes>
+        </node>
+        <node code="news010400" name="新闻发布" type="Action" showOrder="4" newpage="false" icon="cms-m-news-publish-icon">
+           <action>/cms/news/deploy/list.mvc</action>
+           <nodes>
+				<node code="news010401" name="发布" showOrder="1" newpage="false" type="Operate">
+					<action>/cms/news/deploy/todeploy.mvc;/cms/news/deploy/deploy.mvc</action>
+				</node>
+				<node code="news010402" name="详细" showOrder="2" newpage="false" type="Operate">
+					<action>/cms/news/deploy/detail.mvc</action>
+				</node>
+			</nodes>
+        </node>
+        <node code="news010500" name="报送统计" type="Action" showOrder="5" newpage="false" icon="cms-m-news-collect-icon">
+           <action>/cms/news/submit/count.mvc</action>
+           <nodes>
+				<node code="news010501" name="添加" showOrder="1" newpage="false" type="Operate">
+					<action>/cms/news/submit/toadd.mvc;/cms/news/submit/add.mvc</action>
+				</node>
+				<node code="news010502" name="修改" showOrder="2" newpage="false" type="Operate">
+					<action>/cms/news/submit/toedit.mvc;/cms/news/submit/edit.mvc</action>
+				</node>
+				<node code="news010503" name="删除" showOrder="3" newpage="false" type="Operate">
+					<action>/cms/news/submit/delete.mvc</action>
+				</node>
+				<node code="news010504" name="详细" showOrder="4" newpage="false" type="Operate">
+					<action>/cms/news/submit/detail.mvc</action>
+				</node>
+			</nodes>
+        </node>
+      </nodes>
+    </node>
+  </menu>
+<security>
+   <nologin>/library/ueditor/**</nologin>
+   <nologin>/cms/news/submit/choosechannel.mvc</nologin>
+</security>
+</module>

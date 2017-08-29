@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="mediadb">
+	<description>媒体库管理</description>
+	<menu baseUrl="http://10.0.200.103:8083">
+		<node code="mediadb010000" parentCode="cms" name="媒体库管理" type="Catalog" showOrder="1" newpage="false" icon="cms-c-template-icon">
+			<nodes>
+				<node code="mediadb010100" name="图片库管理" type="Action"
+					showOrder="1" newpage="false" icon="cms-m-template-res-icon">
+					<action>/cms/picture/plist.mvc;/cms/mediadb/right.mvc</action>
+					<nodes>
+						<node code="mediadb010101" name="删除" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/mediadb/delete.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="mediadb020100" name="媒体库管理" type="Action" showOrder="2" newpage="false" icon="cms-m-template-res-icon">
+					<action>/cms/picture/vlist.mvc</action>
+					<nodes>
+						<node code="mediadb020101" name="删除" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/mediatype/delete.mvc</action>
+						</node>
+					</nodes>
+				</node>
+			</nodes>
+		</node>
+	</menu>
+	
+	<consts>
+		<!-- 媒体目录 -->
+		<citem name="titlepicpath" value="D:\cms\titlepic"></citem>
+	</consts>
+</module>

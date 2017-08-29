@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="cms" title="内容发布管理" showOrder="50" icon="cms-icon">
+	<description>CMS内容管理系统</description>
+	<menu baseUrl="http://10.0.200.103:8083">
+		<!-- 可以动态的加载一些内容 -->
+		<node code="cms010000" name="内容管理" type="Catalog" showOrder="1" newpage="false" icon="cms-c-content-icon">
+			<nodes>
+				<node code="cms090100" name="站点管理" showOrder="1" newpage="false" type="Action" icon="cms-m-site-icon">
+					<action>/cms/site/list.mvc;/cms/site/main.mvc</action>
+					<nodes>
+						<node code="cms090101" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/site/toadd.mvc;/cms/site/add.mvc;/cms/site/tplindex.mvc</action>
+						</node>
+						<node code="cms090102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/site/toedit.mvc;/cms/site/edit.mvc;/cms/site/tplindex.mvc</action>
+						</node>
+						<node code="cms090103" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/site/delete.mvc</action>
+						</node>
+						<node code="cms090104" name="详细" showOrder="4" newpage="false" type="Operate">
+							<action>/cms/site/detail.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="cms090200" name="模型管理" showOrder="3" newpage="false" type="Action" icon="cms-m-model-icon">
+					<action>/cms/model/list.mvc</action>
+					<nodes>
+						<node code="cms090201" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/model/toadd.mvc;/cms/model/add.mvc</action>
+						</node>
+						<node code="cms090202" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/model/toedit.mvc;/cms/model/edit.mvc</action>
+						</node>
+						<node code="cms090203" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/model/delete.mvc</action>
+						</node>
+						<node code="cms090204" name="详细" showOrder="4" newpage="false" type="Operate">
+							<action>/cms/model/detail.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="cms010300" name="栏目管理" showOrder="3" newpage="false" type="Action" icon="cms-m-channel-icon">
+					<action>/cms/channel/index.mvc;/cms/channel/list.mvc;/cms/channel/right.mvc</action>
+					<nodes>
+						<node code="cms010301" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/channel/toadd.mvc;/cms/channel/add.mvc;/cms/channel/choose.mvc</action>
+						</node>
+						<node code="cms010302" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/channel/toedit.mvc;/cms/channel/edit.mvc;/cms/channel/choose.mvc</action>
+						</node>
+						<node code="cms010303" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/channel/delete.mvc</action>
+						</node>
+						<node code="cms010304" name="详细" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/channel/detail.mvc</action>
+						</node>
+						
+					</nodes>
+				</node>
+				<node code="cms010400" name="内容类型" showOrder="4" newpage="false" type="Action" icon="cms-m-ctype-icon">
+					<action>/cms/contenttype/list.mvc</action>
+					<nodes>
+						<node code="cms010401" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/contenttype/toadd.mvc;/cms/contenttype/add.mvc</action>
+						</node>
+						<node code="cms010402" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/contenttype/toedit.mvc;/cms/contenttype/edit.mvc</action>
+						</node>
+						<node code="cms010403" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/contenttype/delete.mvc</action>
+						</node>
+						<node code="cms010404" name="详细" showOrder="4" newpage="false" type="Operate">
+							<action>/cms/contenttype/detail.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="cms010500" name="内容管理" showOrder="5" newpage="false" type="Action" icon="cms-m-content-icon">
+					<action>/cms/content/index.mvc;/cms/content/list.mvc;/cms/content/right.mvc</action>
+					<nodes>
+						<node code="cms010501" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/content/toadd.mvc;/cms/content/add.mvc</action>
+						</node>
+						<node code="cms010502" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/content/toedit.mvc;/cms/content/edit.mvc</action>
+						</node>
+						<node code="cms010503" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/content/delete.mvc</action>
+						</node>
+						<node code="cms010504" name="详细" showOrder="4" newpage="false" type="Operate">
+							<action>/cms/content/detail.mvc</action>
+						</node>
+						<node code="cms010505" name="置项" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/content/changetop.mvc</action>
+						</node>
+						<node code="cms010506" name="移动内容" showOrder="4" newpage="false" type="Operate">
+							<action>/cms/content/tomove.mvc</action>
+						</node>
+						<node code="cms010507" name="复制内容" showOrder="5" newpage="false" type="Operate">
+							<action>/cms/content/tocopy.mvc;/cms/content/copy.mvc</action>
+						</node>
+						<node code="cms010508" name="保存" showOrder="6" newpage="false" type="Operate">
+							<action>/cms/content/add.mvc</action>
+						</node>
+						<node code="cms010509" name="提交并发布" showOrder="7" newpage="false" type="Operate">
+							<action>/cms/content/add.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="cms010600" name="内容审核" showOrder="5" newpage="false" type="Action" icon="cms-m-check-icon">
+					<action>/cms/check/index.mvc;/cms/check/list.mvc;/cms/check/right.mvc</action>
+					<nodes>
+						<node code="cms010601" name="审核" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/check/tocheck.mvc;/cms/check/check.mvc</action>
+						</node>
+						<node code="cms010602" name="详细" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/check/detail.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				<node code="cms010700" name="内容发布" showOrder="6" newpage="false" type="Action" icon="cms-m-publish-icon">
+					<action>/cms/deploy/index.mvc;/cms/deploy/list.mvc;/cms/deploy/right.mvc</action>
+					<nodes>
+						<node code="cms010701" name="发布" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/deploy/deploy.mvc</action>
+						</node>
+						<node code="cms010702" name="详细" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/deploy/detail.mvc</action>
+						</node>
+					</nodes>
+				</node>
+				
+				<node code="cms010800" name="内容数量统计" showOrder="8" newpage="false" type="Action" icon="cms-m-ctype-icon">
+					<action>/cms/contentcount/list.mvc</action>
+					<nodes>
+						<node code="cms010801" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/cms/contentcount/toadd.mvc;/cms/contentcount/add.mvc</action>
+						</node>
+						<node code="cms010802" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/cms/contentcount/toedit.mvc;/cms/contentcount/edit.mvc</action>
+						</node>
+						<node code="cms010803" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/cms/contentcount/delete.mvc</action>
+						</node>
+						<node code="cms010804" name="详细" showOrder="4" newpage="false" type="Operate">
+							<action>/cms/contentcount/detail.mvc</action>
+						</node>
+					</nodes>
+				</node>
+			</nodes>
+		</node>
+	</menu>
+	<security>
+		<nologin>/library/ueditor/**</nologin>
+		<nologin>/cms/channel/choose.mvc</nologin>
+	</security>
+</module>

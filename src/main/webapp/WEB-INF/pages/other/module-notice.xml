@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<module name="other" title="其他管理" showOrder="999" icon="other-icon">
+	<description>公告信息管理</description>
+	<menu>
+		<node code="notice010000" ame="公告管理" type="Catalog" showOrder="1" icon="notice-c-icon" newpage="false">
+			<nodes>
+				<node code="notice010100" name="公告管理" showOrder="1" newpage="false" type="Action" icon="notice-m-manage-icon">
+					<action>/reps/notice/list.mvc</action>
+					<nodes>
+						<node code="notice010101" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/reps/notice/toadd.mvc;/reps/notice/add.mvc</action>
+						</node>
+						<node code="notice010102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/reps/notice/toedit.mvc;/reps/notice/edit.mvc</action>
+						</node>
+						<node code="notice010103" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/reps/notice/delete.mvc;</action>
+						</node>
+						<node code="notice010104" name="发布" showOrder="3" newpage="false" type="Operate">
+							<action>/reps/notice/release.mvc;</action>
+						</node>
+					</nodes>
+				</node>
+			</nodes>
+		</node>
+	</menu>
+	<consts>
+	</consts>
+</module>

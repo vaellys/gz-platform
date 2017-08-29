@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="xxgk" title="信息公开管理" showOrder="70" icon="cms-icon">
+	<description>信息公开管理</description>
+	<menu>
+		<node code="infoopen010000" name="信息公开管理" type="Catalog" showOrder="1" newpage="false" icon="cms-c-template-icon">
+			<nodes>
+				<node code="infoopen010100" name="受理申请" type="Action" showOrder="1" newpage="false" icon="cms-m-template-res-icon">
+					<action>/xxgk/infoopen/list.mvc</action>
+					<nodes>
+						<node code="infoopen010101" name="详细" showOrder="1" newpage="false" type="Operate">
+							<action>/xxgk/infoopen/detail.mvc;</action>
+						</node>
+						<node code="infoopen010102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/xxgk/infoopen/toedit.mvc;/xxgk/infoopen/edit.mvc;/xxgk/infoopen/submit.mvc</action>
+						</node>
+						<node code="infoopen010103" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/xxgk/infoopen/delete.mvc</action>
+						</node>
+					</nodes>
+				</node>
+
+				<node code="infoopen020100" name="信息公开" type="Action" showOrder="2" newpage="false" icon="cms-m-template-res-icon">
+					<action>/xxgk/infoopen/openlist.mvc</action>
+					<nodes>
+						<node code="infoopen020101" name="公开" showOrder="1" newpage="false" type="Operate">
+							<action>/xxgk/infoopen/updatestate.mvc;</action>
+						</node>
+						<node code="infoopen020102" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/xxgk/infoopen/delete.mvc</action>
+						</node>
+					</nodes>
+				</node>
+
+				<node code="infoopen030100" name="类别管理" type="Action" showOrder="3" newpage="false" icon="cms-m-template-res-icon">
+					<action>/xxgk/infotype/list.mvc</action>
+					<nodes>
+						<node code="infoopen030101" name="添加" showOrder="1" newpage="false" type="Operate">
+							<action>/xxgk/infotype/toadd.mvc;/xxgk/infotype/add.mvc</action>
+						</node>
+						<node code="infoopen030102" name="修改" showOrder="2" newpage="false" type="Operate">
+							<action>/xxgk/infotype/toedit.mvc;/xxgk/infotype/edit.mvc</action>
+						</node>
+						<node code="infoopen030303" name="删除" showOrder="3" newpage="false" type="Operate">
+							<action>/xxgk/infotype/delete.mvc</action>
+						</node>
+					</nodes>
+				</node>
+			</nodes>
+		</node>
+	</menu>
+	
+</module>

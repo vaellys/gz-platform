@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module name="guestbook" title="领导信箱" showOrder="60" icon="cms-icon">
+  <description>this is a test</description>
+  <menu>
+    <node code="guestbook010000" name="领导信箱" type="Catalog" showOrder="1" newpage="false">
+      <nodes>
+        <node code="guestbook010200" name="领导信箱管理" showOrder="2" newpage="false" type="Action">
+           <action>/guestbook/mailbox/list.mvc</action>
+           <nodes>
+				<node code="guestbook010201" name="添加" showOrder="1" newpage="false" type="Operate">
+					<action>/guestbook/mailbox/toadd.mvc;/guestbook/mailbox/add.mvc</action>
+				</node>
+				<node code="guestbook010202" name="修改" showOrder="2" newpage="false" type="Operate">
+					<action>/guestbook/mailbox/toedit.mvc;/guestbook/mailbox/edit.mvc</action>
+				</node>
+				<node code="guestbook010203" name="删除" showOrder="3" newpage="false" type="Operate">
+					<action>/guestbook/mailbox/delete.mvc</action>
+				</node>
+				<node code="guestbook010204" name="详细" showOrder="4" newpage="false" type="Operate">
+					<action>/guestbook/mailbox/detail.mvc</action>
+				</node>
+				<node code="guestbook010205" name="部门分发" showOrder="4" newpage="false" type="Operate">
+					<action>/guestbook/mailbox/tochange.mvc;/guestbook/mailbox/change.mvc;</action>
+				</node>
+			</nodes>
+        </node>
+        <node code="guestbook020200" name="邮件类型" showOrder="1" newpage="false" type="Action">
+           <action>/guestbook/mailtype/list.mvc</action>
+           <nodes>
+				<node code="guestbook020201" name="添加" showOrder="1" newpage="false" type="Operate">
+					<action>/guestbook/mailtype/toadd.mvc;/guestbook/mailtype/add.mvc</action>
+				</node>
+				<node code="guestbook020202" name="修改" showOrder="2" newpage="false" type="Operate">
+					<action>/guestbook/mailtype/toedit.mvc;/guestbook/mailtype/edit.mvc</action>
+				</node>
+				<node code="guestbook020203" name="删除" showOrder="3" newpage="false" type="Operate">
+					<action>/guestbook/mailtype/delete.mvc</action>
+				</node>
+				<node code="guestbook020204" name="详细" showOrder="4" newpage="false" type="Operate">
+					<action>/guestbook/mailtype/detail.mvc</action>
+				</node>
+			</nodes>
+        </node>
+        <node code="guestbook010300" name="在线咨询" showOrder="3" newpage="false" type="Action">
+           <action>/guestbook/message/list.mvc</action>
+           <nodes>
+				<node code="guestbook010302" name="修改" showOrder="2" newpage="false" type="Operate">
+					<action>/guestbook/message/toedit.mvc;/guestbook/message/edit.mvc</action>
+				</node>
+				<node code="guestbook010303" name="删除" showOrder="3" newpage="false" type="Operate">
+					<action>/guestbook/message/delete.mvc</action>
+				</node>
+				<node code="guestbook010304" name="详细" showOrder="4" newpage="false" type="Operate">
+					<action>/guestbook/message/detail.mvc</action>
+				</node>
+			</nodes>
+        </node>
+        <node code="guestbook010400" name="领导邮箱统计" showOrder="3" newpage="false" type="Action">
+           <action>/guestbook/mailbox/totjlist.mvc</action>
+        </node>
+      </nodes>
+    </node>
+  </menu>
+</module>
