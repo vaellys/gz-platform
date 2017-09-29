@@ -36,18 +36,18 @@
 			<reps:gridrow>
 				<c:choose>
 					<c:when test="${empty info.auditStatus }">
-						<reps:gridcheckboxfield checkboxName="id" align="center" title="" width="5">${info.id}</reps:gridcheckboxfield>
+						<reps:gridcheckboxfield checkboxName="id" align="center" title="" >${info.id}</reps:gridcheckboxfield>
 					</c:when>
 					<c:otherwise>
-						<reps:gridfield title="" width="1" align="center"><span></span></reps:gridfield>
+						<reps:gridfield title="" align="center" ><span></span></reps:gridfield>
    					</c:otherwise>
 				</c:choose>
-				<reps:gridfield title="活动参与者" width="15" align="center">${info.student.person.name}</reps:gridfield>
-				<reps:gridfield title="学校" width="25" align="center">${info.school.organize.name }</reps:gridfield>
+				<reps:gridfield title="活动参与者" width="30" align="center">${info.student.person.name}</reps:gridfield>
+				<reps:gridfield title="学校" width="30" align="center">${info.school.organize.name }</reps:gridfield>
 				<reps:gridfield title="年级" width="30" align="center">
 					<sys:dictionary src="grade">${info.grade}</sys:dictionary>
 				</reps:gridfield>
-				<reps:gridfield title="班级" width="25" align="center">${info.classes.name}</reps:gridfield>
+				<reps:gridfield title="班级" width="30" align="center">${info.classes.name}</reps:gridfield>
 				<reps:gridfield title="审核状态" width="15" align="center"><c:if test="${info.auditStatus == '1'}">审核通过</c:if><c:if test="${info.auditStatus == '2' }">驳回</c:if><c:if test="${empty info.auditStatus}">待审核</c:if></reps:gridfield>
 				<c:if test="${empty info.auditStatus}">
 					<reps:gridfield title="操作" width="25" align="center">
