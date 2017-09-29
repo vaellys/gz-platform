@@ -34,9 +34,14 @@
 	<reps:panel id="mybody" dock="center">
 		<reps:grid id="infoList" items="${list}" form="queryForm" var="info" pagination="${pager}" flagSeq="false">
 			<reps:gridrow>
-				<c:if test="${empty info.auditStatus }">
-					<reps:gridcheckboxfield checkboxName="id" align="center" title="" width="5">${info.id}</reps:gridcheckboxfield>
-				</c:if>
+				<c:choose>
+					<c:when test="${empty info.auditStatus }">
+						<reps:gridcheckboxfield checkboxName="id" align="center" title="" width="5">${info.id}</reps:gridcheckboxfield>
+					</c:when>
+					<c:otherwise>
+						<reps:gridfield title="" width="1" align="center"><span></span></reps:gridfield>
+   					</c:otherwise>
+				</c:choose>
 				<reps:gridfield title="活动参与者" width="15" align="center">${info.student.person.name}</reps:gridfield>
 				<reps:gridfield title="学校" width="25" align="center">${info.school.organize.name }</reps:gridfield>
 				<reps:gridfield title="年级" width="30" align="center">
@@ -44,12 +49,12 @@
 				</reps:gridfield>
 				<reps:gridfield title="班级" width="25" align="center">${info.classes.name}</reps:gridfield>
 				<reps:gridfield title="审核状态" width="15" align="center"><c:if test="${info.auditStatus == '1'}">审核通过</c:if><c:if test="${info.auditStatus == '2' }">驳回</c:if><c:if test="${empty info.auditStatus}">待审核</c:if></reps:gridfield>
-				<reps:gridfield title="操作" width="25" align="center">
-					<c:if test="${empty info.auditStatus}">
-						<reps:dialog cssClass="audit-table" id="audit" iframe="true" width="450"
-							 height="300" url="toaudit.mvc?id=${info.id}" value="审核"></reps:dialog>
-					</c:if>
+				<c:if test="${empty info.auditStatus}">
+					<reps:gridfield title="操作" width="25" align="center">
+							<reps:dialog cssClass="audit-table" id="audit" iframe="true" width="450"
+								 height="300" url="toaudit.mvc?id=${info.id}" value="审核"></reps:dialog>
 				</reps:gridfield>
+				</c:if>
 			</reps:gridrow>
 		</reps:grid>
 	</reps:panel>
@@ -57,7 +62,7 @@
 </reps:container>
 <script type="text/javascript">
 	var my = function(data){
-		window.location.href= "statistics.mvc";
+		window.location.href= "statistics.mvc?rewardId=${info.rewardId}";
 	};
 	
 	function back() {
@@ -84,7 +89,7 @@
 	
 	var checkAuditPassed = function() {
 		if(buildIdParams("请选择要批量审核通过的活动信息")){
-			$("#queryForm").attr("action", "audit.mvc?auditStatus=1");
+			$("#queryForm").attr("action", "batchaudit.mvc?auditStatus=1");
 			return true;
 		}else{
 			return false;
@@ -92,8 +97,8 @@
 	};
 	
 	var checkAuditRejected = function(){
-		if(buildIdParams("请选择要批量审核驳回的活动信息") && checkActivityStatus()){
-			$("#queryForm").attr("action", "batchpublish.mvc?auditStatus=2");
+		if(buildIdParams("请选择要批量审核驳回的活动信息")){
+			$("#queryForm").attr("action", "batchaudit.mvc?auditStatus=2");
 			return true;
 		}else{
 			return false;

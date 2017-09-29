@@ -37,7 +37,7 @@
 							<action>/reps/jifen/activityreward/show.mvc</action>
 						</node>
 						<node code="jifen010205" name="活动发布" showOrder="5" newpage="false" type="Operate">
-							<action>/reps/jifen/activityreward/batchpublish.mvc</action>
+							<action>/reps/jifen/activityreward/batchpublish.mvc;/reps/jifen/activityreward/updatepublish.mvc</action>
 						</node>
 						<node code="jifen010206" name="活动延期" showOrder="6" newpage="false" type="Operate">
 							<action>/reps/jifen/activityreward/todelay.mvc;/reps/jifen/activityreward/delay.mvc</action>
@@ -46,7 +46,7 @@
 							<action>/reps/jifen/activityreward/statistics.mvc</action>
 						</node>
 						<node code="jifen010208" name="活动审核" showOrder="8" newpage="false" type="Operate">
-							<action>/reps/jifen/activityreward/toaudit.mvc;/reps/jifen/activityreward/audit.mvc;/reps/jifen/activityreward/batchaudit.mvc</action>
+							<action>/reps/jifen/activityreward/toaudit.mvc;/reps/jifen/activityreward/audit.mvc;/reps/jifen/activityreward/batchaudit.mvc;</action>
 						</node>
 					</nodes>
 				</node>
